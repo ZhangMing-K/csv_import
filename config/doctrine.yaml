@@ -1,0 +1,19 @@
+<pre  class="7">
+  <code class="7">doctrine:
+    dbal:
+        # configure these for your database server
+        driver: 'pdo_mysql'
+        server_version: '8.0'
+        charset: utf8mb4
+        url: '%env(resolve:DATABASE_URL)%'
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+        # configure these for your application needs
+        dbname: my_database
+        user: my_username
+        password: my_password
+        host: 127.0.0.1
+        port: 3307
+  </code>
+</pre>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Your CSV submitted</title>
+        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f5f5f5;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Newly added count {{newlyAddedCount}}</h3>
+            <button id="back" data-url="{{ url("app_csv_import")}}">back</button>
+        </div>
+
+    </body>
+    <script>
+        const btnBack = document.querySelector('#back');
+      
+        btnBack.addEventListener('click', () => {
+            const url = btnBack.dataset.url;
+            console.log('url: ', url);
+            window.location = url
+        });
+        
+    </script>
+</html>
